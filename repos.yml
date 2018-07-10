@@ -1,0 +1,22 @@
+./product_attribute:
+    remotes:
+        oca: https://github.com/OCA/product-attribute.git
+        acsone: git+ssh://git@github.com/acsone/product-attribute.git
+    merges:
+        - oca 8.0
+        - oca refs/pull/105/head
+        - oca refs/pull/106/head
+    target: acsone aggregated_branch_name
+
+./connector-interfaces:
+    remotes:
+        oca:  https://github.com/OCA/connector-interfaces.git
+        acsone:  https://github.com/acsone/connector-interfaces.git
+    merges:
+        - oca 6054de2c4e669f85cec380da90d746061967dc83
+        - acsone 8.0-connector_flow
+        - acsone 80_connector_flow_ir_cron_able-lmi
+        - acsone 8.0_connector_flow_improve_eval_config
+    target: acsone aggregated_branch_name
+    fetch_all:
+        - oca
